@@ -17,7 +17,9 @@ def main () :
   mot = pf.choix_mot()
   print("je vais vous faire trouver le mot : ", mot)
 
-#un mot de 8 lettres max
+  while pf.ctrl_chain(mot) != True : 
+    mot = pf.choix_mot()
+  print("ok le mot convient")
 
 # le joueur donne une lettre 
 

@@ -15,3 +15,13 @@ def name() :
 def choix_mot() : 
   mot = pd.liste_de_mots[randint(0, len(pd.liste_de_mots)-1)]
   return mot
+  
+#contrôle nb de lettres
+def ctrl_chain (chain) :
+  if  len(chain) > 8 : 
+    return False
+  elif  len(chain) < 5 : 
+    return False
+  else :
+    return True
+  
