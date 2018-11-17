@@ -18,10 +18,16 @@ def choix_mot() :
   
 #contrôle nb de lettres
 def ctrl_chain (chain) :
-  if  len(chain) > 8 : 
+  if  len(chain) > 10 : 
     return False
   elif  len(chain) < 5 : 
     return False
   else :
     return True
-  
+
+#création du squelette du mot, avec la première lettre dévoilée
+def squelette(chain): 
+  squel_mot = chain[0].upper()
+  squel_mot += " _"*(len(chain)-1)
+  # print("Mot à découvrir : "+ squel_mot)
+  return squel_mot

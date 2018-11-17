@@ -10,17 +10,23 @@ print("\n", "* * "*30,)
 
 
 def main () : 
-#l'ordi demande au joueur d'enregistrer son nom, pour enregistrer le score
+  #l'ordi demande au joueur d'enregistrer son nom, pour enregistrer le score
   name = pf.name()
-  print("Ok alors je vous appellerai : ", name)
-
+  print("Ok alors je vous appellerai : ", name, "\n")
+  #l'ordi va chercher un mot
   mot = pf.choix_mot()
-  print("je vais vous faire trouver le mot : ", mot)
-
+  
+  ## --
+  #verif que le mot convient
   while pf.ctrl_chain(mot) != True : 
     mot = pf.choix_mot()
-  print("ok le mot convient")
+  print(mot,"en", len(mot),"lettres, ok le mot convient")
+  
+  #l'ordinateur crée le squelette du mot
+  squel_mot = pf.squelette(mot)
+  print(squel_mot)
 
+  
 # le joueur donne une lettre 
 
 # l'ordinateur vérifie
