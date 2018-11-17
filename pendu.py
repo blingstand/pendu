@@ -25,6 +25,12 @@ def main () :
   #l'ordinateur crée le squelette du mot
   squel_mot = pf.squelette(mot)
   print(squel_mot)
+  
+  #l'ordinateur affiche le nombre de vies restantes
+  qtt_vie = 8
+  print("Jauge de vie = ","* "*qtt_vie)
+  
+  #le joueur propose une lettre
 
   
 # le joueur donne une lettre 
