@@ -26,8 +26,8 @@ def main () :
   print(mot,"en", len(mot),"lettres")
   
   #l'ordinateur crée le squelette du mot
-  squel_mot = pf.squelette(mot)
-  print(squel_mot)
+  squelette = pf.squelette(mot)
+  print(squelette)
   
   #l'ordinateur affiche le nombre de vies restantes
   qtt_vie = 8
@@ -43,9 +43,14 @@ def main () :
     print("la lettre est présente dans le mot")
     #je récupère l'index pour chaque fois qu'il y a la lettre donnée
     ind_repet = pf.recup_index (lettre, mot)
+    index = ind_repet[1]
     print("Dans", mot, "il y a ", ind_repet[0], "fois la lettre", lettre, "à la / aux position(s)", ind_repet[1])
+    
+    #je dois afficher le nouveau squelette
+    nv_squel = pf.feedback_p(lettre, index, squelette)
+    print(nv_squel)
   else : 
-    print("la lettre n'est pas présente dans le mot")
+    qtt_vie = pf.feedback_n(qtt_vie)
 
 #calcul du score = nombre de coups restants
 

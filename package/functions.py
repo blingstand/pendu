@@ -28,7 +28,7 @@ def ctrl_chain (chain) :
 #création du squelette du mot, avec la première lettre dévoilée
 def squelette(chain): 
   squel_mot = chain[0].upper()
-  squel_mot += " _"*(len(chain)-1)
+  squel_mot += "_"*(len(chain)-1)
   # print("Mot à découvrir : "+ squel_mot)
   return squel_mot
 
@@ -53,7 +53,8 @@ def check_presence (char, word) :
   for x in word : 
     return char in word
 
-#si True je récupère le nombre de fois où la lettre est présente et les index
+## --------------------------si True 
+#je récupère le nombre de fois où la lettre est présente et les index
 def recup_index (char, word): 
   ind_lettre = []
   nb_lettre = 0
@@ -63,4 +64,21 @@ def recup_index (char, word):
       ind_lettre.append(i)
   return(nb_lettre, ind_lettre)
 
+#j'affiche le nouveau squelette
+def feedback_p (char, index, skull) : 
+  #je crée une liste squelette pour le remplace
+  list_squel = list(skull)
+  for i in index : 
+    list_squel[i]= char
+  #je converti ma liste en str
+  nv_squel = ""
+  for i in list_squel : 
+    nv_squel += i 
+  return nv_squel
+## -------------------------si false 
+#je retire une vie
+def feedback_n (life): 
+  life -= 1 
+  print ("Cette lettre n'est pas dans le mot, j'enlève une vie.", "\nJauge de vie = ","* "*life)
+  return life
 
