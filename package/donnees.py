@@ -19,7 +19,6 @@ def enleve_acent (word):
       i = i.replace(i, "u")
     new_word +=i
   return new_word.upper()
-print(enleve_acent("passagère"))
+
 
 liste_Maj_0acc = list(map(enleve_acent, LISTE))
-print (liste_Maj_0acc)
