@@ -41,7 +41,9 @@ def main () :
   
   if check : 
     print("la lettre est présente dans le mot")
-    
+    #je récupère l'index pour chaque fois qu'il y a la lettre donnée
+    ind_repet = pf.recup_index (lettre, mot)
+    print("Dans", mot, "il y a ", ind_repet[0], "fois la lettre", lettre, "à la / aux position(s)", ind_repet[1])
   else : 
     print("la lettre n'est pas présente dans le mot")
 
